@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     transition: 0.2s;
+    outline: none;
 }
 
 body {
@@ -91,12 +92,19 @@ body.dark {
     font-weight: 700;
     align-items: flex-end;
     justify-content: start;
+    opacity: 1;
    
 }
 
-.timerDisplay .ms {
-    font-size: 9vh;
-    padding: 0px 0px 28px 0px;
+.timerDisplay.anim {
+   animation-name: blink;
+   -moz-animation-name: blink;
+   animation-duration: .2s;
+   -moz-animation-duration: .2s;
+   animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+   -moz-animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+   animation-iteration-count: infinite;
+   -moz-animation-iteration-count: infinite;
 }
 
 #themeSwitcher {
